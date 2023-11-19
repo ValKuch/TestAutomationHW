@@ -1,0 +1,132 @@
+
+public class Task1 {
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+  System.out.println("Enter the price excluding VAT");
+        double PRICE_NO_VAT = scanner.nextDouble();
+        double PRICE_W_VAT = PRICE_NO_VAT + (PRICE_NO_VAT * 0.2);
+        System.out.println("Price excluding VAT:" + PRICE_NO_VAT);
+        System.out.println("Price including VAT:" + PRICE_W_VAT);
+    }
+    }
+
+
+public class Task2 {
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        System.out.println("Enter the temperature value for the 1st day");
+        float temp1 = scanner.nextFloat();
+        System.out.println("Enter the temperature value for the 2nd day");
+        float temp2 = scanner.nextFloat();
+        System.out.println("Enter the temperature value for the 3rd day");
+        float temp3 = scanner.nextFloat();
+        System.out.println("Enter the temperature value for the 4th day");
+        float temp4 = scanner.nextFloat();
+        System.out.println("Enter the temperature value for the 5th day");
+        float temp5 = scanner.nextFloat();
+        float average_temp = (temp1 + temp2 + temp3 + temp4 + temp5) / 5;
+        System.out.printf("Average temperature for 5 days: %.2f", average_temp);
+    }
+    }
+
+
+public class Task3 {
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        System.out.println("Enter a string of characters");
+        String input = scanner.nextLine();
+        input = input.toLowerCase();
+        int vowelNumber = 0;
+for (int i = 0; i < input.length(); i++){
+    char letter = input.charAt(i);
+    if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u') {
+        vowelNumber++;
+    }
+}
+        System.out.println("Number of vowels:" + vowelNumber);
+
+    }
+    }
+
+
+public class Task4 {
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        System.out.println("Enter an integer number");
+        int number = scanner.nextInt();
+      if (number %2 == 0){
+          System.out.println("Your number is even");}
+      else {
+          System.out.println("Your number is odd");}
+
+    }
+
+      }
+
+
+public class Task5 {
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        System.out.println("Enter the test score (1-100)");
+        int score = scanner.nextInt();
+        if (score > 0 && score < 65) {
+            System.out.println("Your score is F");
+        } else if (score > 65 && score < 70) {
+            System.out.println("Your score is D");
+        } else if (score > 70 && score < 80) {
+            System.out.println("Your score is C");
+        } else if (score > 80 && score < 90) {
+            System.out.println("Your score is B");
+        } else if (score > 90 && score <= 100) {
+            System.out.println("Your score is A");
+        } else {
+            System.out.println("You entered invalid score");
+        }
+    }
+    }
+
+
+
+public class Task6 {
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        System.out.println("Enter your age");
+        int age = scanner.nextInt();
+        String category;
+        if (age >= 0 && age < 12) {
+             category = "child";}
+        else if (age >= 12 && age < 20) {
+             category = "teenager";}
+        else if (age >= 20 && age <60) {
+         category = "adult";}
+    else {
+            category = "senior";}
+        System.out.println("You are a/n " + category);}
+}
+
+
+
+
+public class Task7 {
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        System.out.println("Enter your initial deposit amount");
+        double deposit = scanner.nextDouble();
+        System.out.println("Enter the annual interest rate");
+        double interest = scanner.nextDouble();
+        System.out.println("Enter the number of years");
+        int years = scanner.nextInt();
+for (int i = 1; i <= years; i++) {
+  double final_amount = deposit * Math.pow((1 + interest), i);
+    System.out.printf("The final amount of your deposit after %d year/s is: %.2f%n", i, final_amount);
+}
+    }
+}
